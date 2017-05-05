@@ -1,0 +1,16 @@
+{
+    "app":{
+        "webConfigDir":"bin/",
+        "cfengine":"lucee@5.1.3+18"
+    },
+    "name":"box",
+    "web":{
+        "http":{
+            "port":"8080",
+            "enable":"true"
+        },
+        "webroot":"server/cfdocs/",
+        "host":"127.0.0.1"
+    },
+    "openbrowser":"false"
+}
