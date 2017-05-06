@@ -2,54 +2,53 @@
 <html>
 
 <head>
-  <meta charset="UTF-8">
-  <title>Local CFDOCS</title>
-  <style>
+    <meta charset="UTF-8">
+    <title>Local CFDOCS</title>
+    <style>
     header {
-      text-align: center;
-      background: #18BC9C;
-      color: #fff;
-      display: block;
-      font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-      text-transform: uppercase;
-      font-weight: 700;
-      font-size: 2em;
-      height:100vh;
-      width:100vw;
-      margin-top: -45px !important;
+        text-align: center;
+        display: block;
+        font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 2em;
+        height: 100vh;
+        width: 100vw;
+        margin-top: -45px !important;
+        overflow: hidden;
     }
-    header div.container{
-      padding-top:100px;
-    }
-    body{
-      margin:0px;
-    }
-  </style>
-  
-  <link rel="stylesheet" href="./assets/font-awesome-4.7.0/css/font-awesome.min.css">
-  <script>
-    window.$ = window.jQuery = require('./node_modules/jquery/dist/jquery.min.js');
-  </script>
-  <script src="./node_modules/jquery/dist/jquery.min.js"></script>
 
+    header div.container {
+        padding-top: 100px;
+    }
+
+    body {
+        margin: 0px;
+        background: #18BC9C;
+        color: #fff;
+    }
+    </style>
+    <link rel="stylesheet" href="./assets/font-awesome-4.7.0/css/font-awesome.min.css">
+    <script>
+    window.$ = window.jQuery = require('./node_modules/jquery/dist/jquery.min.js');
+    </script>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
 </head>
 
 <body>
-  <header>
-    <div class="container">
-    <h1><i class="fa fa-cog fa-spin fa-3x fa-fw" aria-hidden="true"></i></h1>
-    <h1>Loading CFDOCS...</h1>
-    <h2>Please Wait.</h2>
-    </h1>
-    </div>
-  </header>
-  <!-- All of the Node.js APIs are available in this renderer process. -->
-
+    <header>
+        <div class="container">
+            <h1><i class="fa fa-cog fa-spin fa-3x fa-fw" aria-hidden="true"></i></h1>
+            <h1>Loading CFDOCS...</h1>
+            <h2>Please Wait.</h2>
+            </h1>
+        </div>
+    </header>
+    <!-- All of the Node.js APIs are available in this renderer process. -->
 </body>
-
 <script>
-  // You can also require other files to run in this process
-  require('./renderer.js')
+// You can also require other files to run in this process
+require('./renderer.js')
 </script>
 
 </html>
