@@ -1,0 +1,3 @@
+[submodule "server/cfdocs"]
+	path = server/cfdocs
+	url = ../../foundeo/cfdocs.git
