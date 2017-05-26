@@ -1,20 +1,20 @@
 {
-    "app": {
-        "webConfigDir": "bin/",
-        "cfengine": "lucee@4.5.5+006"
+    "app":{
+        "webConfigDir":"bin/",
+        "cfengine":"lucee@4.5.5+006"
     },
-    "name": "box",
-    "web": {
-        "http": {
-            "port": "8080",
-            "enable": "true"
+    "name":"box",
+    "web":{
+        "http":{
+            "port":"8080",
+            "enable":"true"
         },
-        "webroot": "server/cfdocs/",
-        "host": "127.0.0.1"
+        "webroot":"/server/cfdocs/",
+        "host":"127.0.0.1",
+        "rewrites":{
+            "config":"/server/cfdocs/rewrites.xml",
+            "enable":"true"
+        }
     },
-    "openbrowser": "false",
-    "rewrites": {
-        "config": "server/cfdocs/rewrites.xml",
-        "enable": "true"
-    }
+    "openbrowser":"false"
 }
