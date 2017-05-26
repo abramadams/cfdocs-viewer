@@ -1,7 +1,7 @@
 {
     "app": {
         "webConfigDir": "bin/",
-        "cfengine": "lucee@5.1.3+18"
+        "cfengine": "lucee@4.5.5+006"
     },
     "name": "box",
     "web": {

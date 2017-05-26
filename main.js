@@ -167,7 +167,7 @@ function boxStart() {
 
 	let args = [
 		"start",
-		'cfengine="lucee@5.1.3+18"',
+		'cfengine="lucee@4.5.5+006"',
 		'port=8080',
 		"name=" + boxInstance,
 		"openbrowser=false",
@@ -181,7 +181,7 @@ function boxStart() {
 
 	execFile(file, args, options, (error, stdout, stderr) => {
 		// command output is in stdout
-		// console.log( 'started', error, stdout, stderr );
+		console.log( 'started', error, stdout, stderr );
 
 		mainWindow.loadURL('http://localhost:8080/');
 	});
