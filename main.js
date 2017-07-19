@@ -26,7 +26,7 @@ function createWindow() {
 		width: 1024,
 		height: 768
 	} )
-	mainWindow.setMenu( null )
+	// mainWindow.setMenu( null )
 	// and load the index.html of the app.
 	mainWindow.loadURL( url.format( {
 		pathname: path.join( __dirname, 'index.html' ),

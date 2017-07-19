@@ -9,11 +9,11 @@
             "port":"8080",
             "enable":"true"
         },
-        "webroot":"/server/cfdocs/",
+        "webroot":"server/cfdocs/",
         "host":"127.0.0.1",
         "rewrites":{
-            "config":"/server/cfdocs/rewrites.xml",
-            "enable":"true"
+            "config":"server/cfdocs/rewrites.xml",
+            "enable":true
         }
     },
     "openbrowser":"false"
