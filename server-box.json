@@ -16,5 +16,10 @@
             "enable":true
         }
     },
+    "trayOptions":[
+        {
+            "disabled":true
+        }
+    ],
     "openbrowser":"false"
 }
