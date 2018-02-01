@@ -22,7 +22,7 @@ To clone and run this repository you'll need [Git](https://git-scm.com) and [Nod
 # Clone this repository
 git clone https://github.com/abramadams/cfdocs-viewer
 # Go into the repository
-cd electron-quick-start
+cd cfdocs-viewer
 # Install dependencies
 npm install
 # Run the app
