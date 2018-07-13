@@ -7,7 +7,9 @@ const BrowserWindow = electron.BrowserWindow
 const path = require( 'path' )
 const url = require( 'url' )
 
-const file = path.join( __dirname, '/bin/box.exe' )
+// @TODO embed OS specific versions of box
+const file = 'box' // use below line if box isn't installed
+// const file = path.join( __dirname, '/bin/box.exe' )
 const execFile = require( 'child_process' ).execFile
 const execFileSync = require( 'child_process' ).execFileSync
 const boxInstance = "box"
@@ -37,7 +39,7 @@ function createWindow() {
 
 	// Open the DevTools.
 	// mainWindow.webContents.openDevTools()
-
+	
 	// Emitted when the window is closed.
 	mainWindow.on( 'closed', () => {
 		// Dereference the window object, usually you would store windows
@@ -45,8 +47,8 @@ function createWindow() {
 		// when you should delete the corresponding element.
 		boxStop()
 		mainWindow = null
-	} )
-
+		mainWindow.hide()
+	})
 	// OTHER ELECTRON EVENTS
 	mainWindow.webContents.on( 'did-get-redirect-request', ( event, url ) => {
 		// console.log( 'did-get-redirect-request', url )
@@ -79,10 +81,11 @@ app.on( 'ready', createWindow )
 app.on( 'window-all-closed', () => {
 	// On OS X it is common for applications and their menu bar
 	// to stay active until the user quits explicitly with Cmd + Q
+	console.log('goodbye')
 	boxStop()
-	if( process.platform !== 'darwin' ) {
+	// if( process.platform !== 'darwin' ) {
 		app.quit()
-	}
+	// }
 } )
 
 app.on( 'activate', () => {
@@ -92,7 +95,6 @@ app.on( 'activate', () => {
 		createWindow()
 	}
 } )
-
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
 
@@ -100,7 +102,7 @@ function boxStart() {
 
 	let args = [
 		"start",
-		"./server-box.json" // <-- commandbox server config
+		"./server.json" // <-- commandbox server config
 	]
 	let options
 
@@ -112,12 +114,12 @@ function boxStart() {
 	} )
 }
 
-function boxStop() {
+function boxStop() {	
 	let args = [ "stop", "name=" + boxInstance, "--all" ]
 	let options
 	console.log( 'Stopping Lucee' )
 
-	execFileSync( file, args, options, ( error, stdout, stderr ) => {
+	execFile( file, args, options, ( error, stdout, stderr ) => {
 		// command output is in stdout
 		console.log( 'Lucee has stopped' )
 	} )

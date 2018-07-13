@@ -1,0 +1,21 @@
+{
+    "app":{
+        "webConfigDir":"bin/",
+        "cfengine":"lucee@5.*"
+    },
+    "name":"cfdocs-server",
+    "web":{
+        "http":{
+            "port":"8080",
+            "enable":true
+        },
+        "webroot":"server/cfdocs/",
+        "host":"127.0.0.1",
+        "rewrites":{
+            "config":"server/cfdocs/rewrites.xml",
+            "enable":true
+        }
+    },
+    "openbrowser":false,
+    "trayEnable":false
+}
